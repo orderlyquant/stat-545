@@ -92,3 +92,11 @@ Put `knitr::knit_exit()` somewhere early in your `.Rmd` document, either in inli
 code or in a chunk. Keep moving it earlier until things work. Now move it down in the
 document. Eventually you'll be able to narrow down the location of your broken code
 well enough to find the line(s) and fix it.
+
+> Drop these commands into R chunks to check the above:
+
+- `getwd()` will display working directory at run time. If you monkeyed around with
+  working directory with, e.g., the mouse, maybe it’s set to one place for your 
+  interactive development and another when “Knit HTML” takes over?
+
+- list.files() will list the files in working directory. Is the file you want even there?

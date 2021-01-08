@@ -457,6 +457,13 @@ knitr::opts_chunk$set(error = TRUE)
 </code></pre>
 <p>Adapt the <a href="http://webchick.net/node/99">“git bisect” strategy</a>:</p>
 <p>Put <code>knitr::knit_exit()</code> somewhere early in your <code>.Rmd</code> document, either in inline R code or in a chunk. Keep moving it earlier until things work. Now move it down in the document. Eventually you’ll be able to narrow down the location of your broken code well enough to find the line(s) and fix it.</p>
+<blockquote>
+<p>Drop these commands into R chunks to check the above:</p>
+</blockquote>
+<ul>
+<li><p><code>getwd()</code> will display working directory at run time. If you monkeyed around with working directory with, e.g., the mouse, maybe it’s set to one place for your interactive development and another when “Knit HTML” takes over?</p></li>
+<li><p>list.files() will list the files in working directory. Is the file you want even there?</p></li>
+</ul>
 </div>
 </div>
 
