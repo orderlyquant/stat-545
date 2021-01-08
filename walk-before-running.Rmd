@@ -1,8 +1,8 @@
 ---
 title: "Walk Before Running"
 author: "Brandon Farr"
-date: "1/8/2021"
-output: html_document
+date: "2021-01-08"
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
