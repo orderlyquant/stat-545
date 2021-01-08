@@ -403,12 +403,12 @@ summary {
 <div id="chapter-10---cache-credentials-for-https" class="section level2">
 <h2>Chapter 10 - Cache Credentials for HTTPS</h2>
 <ul>
-<li>decided to standardize all github.com use on HTTPS.
+<li><p>decided to standardize all github.com use on HTTPS.</p>
 <ul>
 <li>JBryan recommendation and Github recommendation</li>
 </ul></li>
-<li>downloaded and started to use <a href="https://docs.ropensci.org/credentials/"><code>credentials</code></a> package for storage and use of git PAT</li>
-<li>moved the PAT from explicit store in .Renviron to credential lookup in .Rprofile using <code>credentials::credential_helper_set()</code></li>
+<li><p>downloaded and started to use <a href="https://docs.ropensci.org/credentials/"><code>credentials</code></a> package for storage and use of git PAT</p></li>
+<li><p>moved the PAT from explicit store in .Renviron to credential lookup in .Rprofile using <code>credentials::credential_helper_set()</code></p></li>
 </ul>
 <hr />
 <p><em>skipping intervening Chapters…walked through all directions, setup is working</em></p>
@@ -442,19 +442,15 @@ summary {
 <blockquote>
 <p>Tell knitr to soldier on, even in the presence of errors. Some problems are easier to diagnose if you can execute specific R statements during rendering and leave more evidence behind for forensic examination.</p>
 </blockquote>
-<pre><code>
-```{r setup, include = FALSE, cache = FALSE}
+<pre><code>```{r setup, include = FALSE, cache = FALSE}
 knitr::opts_chunk$set(error = TRUE)
-```
-</code></pre>
+```</code></pre>
 <blockquote>
 <p>If it’s undesirable to globally accept errors, you can still do this for a specific chunk like so:</p>
 </blockquote>
-<pre><code>
-```{r wing-and-a-prayer, error = TRUE}
+<pre><code>```{r wing-and-a-prayer, error = TRUE}
 ## your sketchy code goes here ;)
-```
-</code></pre>
+```</code></pre>
 <p>Adapt the <a href="http://webchick.net/node/99">“git bisect” strategy</a>:</p>
 <p>Put <code>knitr::knit_exit()</code> somewhere early in your <code>.Rmd</code> document, either in inline R code or in a chunk. Keep moving it earlier until things work. Now move it down in the document. Eventually you’ll be able to narrow down the location of your broken code well enough to find the line(s) and fix it.</p>
 <blockquote>
@@ -464,6 +460,26 @@ knitr::opts_chunk$set(error = TRUE)
 <li><p><code>getwd()</code> will display working directory at run time. If you monkeyed around with working directory with, e.g., the mouse, maybe it’s set to one place for your interactive development and another when “Knit HTML” takes over?</p></li>
 <li><p>list.files() will list the files in working directory. Is the file you want even there?</p></li>
 </ul>
+</div>
+<div id="chapter-22---branches" class="section level2">
+<h2>Chapter 22 - Branches</h2>
+<p><a href="https://happygitwithr.com/git-branches.html#dealing-with-conflicts">This</a> is useful for solving merge conflicts. Also, see <a href="https://happygitwithr.com/git-branches.html#dealing-with-conflicts%7D">this</a>.</p>
+</div>
+<div id="chapter-24---common-remote-setups" class="section level2">
+<h2>Chapter 24 - Common remote setups</h2>
+<p>Great place to understand how to work with GitHub.</p>
+<ul>
+<li><strong>ours</strong> setup: the typical one that you should use and that results from following the <strong>New project, GitHub first</strong> workflow</li>
+<li><a href="https://happygitwithr.com/common-remote-setups.html#fork-them"><strong>fork of theirs</strong></a> setup: <em>the way to collaborate</em>, then see <a href="https://happygitwithr.com/fork-and-clone.html">this</a></li>
+</ul>
+</div>
+<div id="chapter-26---the-repeated-amend" class="section level2">
+<h2>Chapter 26 - The Repeated Amend</h2>
+<p><strong>Important:</strong> <a href="https://happygitwithr.com/repeated-amend.html">Repeated Amend</a> is probably the most important concept to grok when you are in the midst of working hard on a project. <em>come back often until it is ingrained</em></p>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<p>A good <a href="https://happygitwithr.com/resources.html">resource</a></p>
 </div>
 </div>
 

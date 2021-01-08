@@ -118,3 +118,22 @@ line(s) and fix it.
 is useful for solving merge conflicts. Also, see [this](https://happygitwithr.com/git-branches.html#dealing-with-conflicts}).
 
 
+## Chapter 24 - Common remote setups
+
+Great place to understand how to work with GitHub.
+
+- **ours** setup: the typical one that you should use and that results
+  from following the **New project, GitHub first** workflow
+- [**fork of theirs**](https://happygitwithr.com/common-remote-setups.html#fork-them)
+  setup: *the way to collaborate*, then see
+  [this](https://happygitwithr.com/fork-and-clone.html)
+  
+## Chapter 26 - The Repeated Amend
+
+**Important:** [Repeated Amend](https://happygitwithr.com/repeated-amend.html)
+is probably the most important concept to grok when you are in the midst
+of working hard on a project. *come back often until it is ingrained*
+
+## Resources
+
+A good [resource](https://happygitwithr.com/resources.html)
