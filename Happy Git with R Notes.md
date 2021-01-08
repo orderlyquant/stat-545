@@ -59,3 +59,36 @@ The standard setup for creating a new repo on github.com is:
 **Important:** this is a key workflow that's a little complicated, so refer to the
 [website](https://happygitwithr.com/existing-github-last.html).
 
+## Chapter 18 - Test drive R Markdown
+
+*some useful R Markdown debugging techniques*
+
+> Tell knitr to soldier on, even in the presence of errors. Some problems are easier
+  to diagnose if you can execute specific R statements during rendering and leave
+  more evidence behind for forensic examination.
+  
+~~~
+
+```{r setup, include = FALSE, cache = FALSE}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+~~~
+
+> If it’s undesirable to globally accept errors, you can still do this for a specific
+  chunk like so:
+  
+~~~
+
+```{r wing-and-a-prayer, error = TRUE}
+## your sketchy code goes here ;)
+```
+
+~~~
+
+Adapt the [“git bisect” strategy](http://webchick.net/node/99):
+
+Put `knitr::knit_exit()` somewhere early in your `.Rmd` document, either in inline R
+code or in a chunk. Keep moving it earlier until things work. Now move it down in the
+document. Eventually you'll be able to narrow down the location of your broken code
+well enough to find the line(s) and fix it.
