@@ -22,3 +22,12 @@ mean(mtcars$mpg)
 ```
 
     ## [1] 20.09
+
+What if I want to see a plot?
+
+``` r
+plot(mtcars$cyl, mtcars$mpg)
+abline(35, -5/2)
+```
+
+![](walk-before-running_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->

@@ -15,3 +15,12 @@ mean(mtcars$mpg)
 
 ```
 
+What if I want to see a plot?
+
+```{r}
+
+plot(mtcars$cyl, mtcars$mpg)
+abline(35, -5/2)
+
+```
+
